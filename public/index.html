@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <h1>Twitter Serach</h1>
+  <form id="search-form">
+    <input type="text" id="search-key">
+    <input type="submit" value="search">
+  </form>
+
+  <div id="search-result-count"></div>
+  <div>
+    Result: <span id="search-result"></span>
+  </div>
+
+  <script type="text/template" id="tweet-template">
+    <%- tweet %>
+  </script>
+
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/underscore/underscore-min.js"></script>
+  <script src="../bower_components/backbone/backbone.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
+

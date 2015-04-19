@@ -1,0 +1,4 @@
+*.swp
+security.js
+node_modules/*
+public/bower_components/*

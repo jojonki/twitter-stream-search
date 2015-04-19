@@ -1,0 +1,19 @@
+{
+  "name": "twitter-public-search",
+  "version": "0.0.0",
+  "authors": [
+    "jojonki <junki.ohmura@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "backbone": "~1.1.2"
+  }
+}
