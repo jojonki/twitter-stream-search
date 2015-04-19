@@ -7,6 +7,27 @@ You can search twitter public streams without a special authorization.
 This repositry has both server-side and client-side applications. The server-side application is a Node.js application.
 And the client-side application is a simple javascript application.
 
+How to use
+---
+* You have to install dependent libraries and set up your twitter application key.
+
+```
+$ git pull https://github.com/jojonki/twitter-stream-search
+$ cd twitter-stream-search
+$ npm install
+$ cd public/
+$ bower install
+$ cd ../
+$ touch security.js
+  module.exports = {
+    consumer_key        : 'xxxxxxxx',
+    consumer_secret     : 'xxxxxxxx',
+    access_token_key    : 'xxxxxxxx',
+    access_token_secret : 'xxxxxxxx'
+  }
+$ node server.js
+```
+
 Libraries
 ----
 - frontend
