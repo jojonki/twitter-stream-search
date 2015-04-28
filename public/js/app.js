@@ -3,6 +3,7 @@
     defaults: {
       'tweet': 'hoge',
       'user': 'fuga',
+      'image': 'image',
       'date': 'time'
     }
   });
@@ -78,13 +79,6 @@
           console.log('response', data);
         }
       );
-
-      // var task = new Task({title: $('#title').val()});
-      // var task = new Task();
-      // if(task.set({title: $('#title').val()}, {validate: true})) {
-      //   this.collection.add(task);
-      //   $('#error').empty();
-      // }
     }
   });
 
@@ -98,14 +92,10 @@
   $('#search-result').html(tweetsView.render().el);
 
   var socket = io.connect();
-  // $('form').submit(function() {
-  //   socket.emit('msg', $('input').val());
-  //   return false;
-  // });
-
   socket.on('msg', function(data) {
     var tweet = new Tweet();
-    if(tweet.set({name: data.name, tweet: data.tweet}, {validate: true})) {
+    console.log(data);
+    if(tweet.set({name: data.name, tweet: data.tweet, image: data.image}, {validate: true})) {
       tweets.add(tweet);
     }
   });

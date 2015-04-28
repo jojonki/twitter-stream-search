@@ -35,7 +35,7 @@ var search = function(option) {
     stream = twitterStream;
     stream.on('data', function (data) {
       if(data.user.name) {
-        io.sockets.emit('msg', {name: data.user.name, tweet: data.text});
+        io.sockets.emit('msg', {name: data.user.name, tweet: data.text, image: data.user.profile_image_url});
       }
       // console.log(data);
     });
